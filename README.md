@@ -1,8 +1,9 @@
 # snippets-lpc
-Snippets for LPC front end development
+## Snippets for LPC front end development
 
-cd ~/.atom/packages
-git clone https://github.com/jbobron/snippets-lpc
+### Install steps
 
-cmd + shift + p, select Window: reload, 
-open .js or .jsx and type 'snp' + tab, you should see "its working!"
+1. cd ~/.atom/packages
+2. git clone https://github.com/jbobron/snippets-lpc
+3. cmd + shift + p, select Window: reload
+4. open .js or .jsx and type 'snp' + tab, you should see "its working!"
