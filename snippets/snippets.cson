@@ -1,0 +1,73 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.js':
+  "testing it('')":
+    'prefix': 'it()'
+    'body': """it("${1}", () => {\n\t${2}\n})"""
+
+  "testing describe('')":
+    'prefix': 'describe()'
+    'body': """describe("${1}", () => {\n\t${2}\n})"""
+
+'.source.js, .source.jsx':
+
+
+  'snippetsTest: atom package working?':
+    'prefix': 'snp'
+    'description': 'Lpc atom snippets test'
+    'body': "its working!"
+    
+  # React Imports
+  'React: import react':
+    'prefix': 'ir'
+    'description': 'Import React package'
+    'body': "import React from 'react';"
+    
+
+  "reactsmart":
+    'prefix': 'reactsmart'
+    'body': "import React, { PropTypes } from 'react'\nimport {connect} from 'react-redux'\nimport { bindActionCreators } from 'redux'\n\nclass $1 extends React.Component {\n\n\tconstructor(props,context) {\n\t\tsuper(props, context)\n\t\tcontext.router\n\t}\n\n\trender () {\n\t\tlet props = {\n\t\t\t...this.props,\n\t\t}\n\t\tconst childrenWithProps = React.Children.map(this.props.children,\n\t\t\t(child) => React.cloneElement(child,props)\n\t\t)\n\n\t\treturn(\n\t\t\t<div>{childrenWithProps}</div>\n\t\t)\n\t}\n}\n\n${1}.contextTypes = {\n\trouter:React.PropTypes.object.isRequired\n}\n\nfunction mapStateToProps(state) {\n\treturn {\n\t\t//data: state.someReducer.get('data'),\n\t}\n}\n\nfunction mapDispatchToProps(dispatch) {\n\treturn {\n\t\t//someActions: bindActionCreators(someActionCreators, dispatch),\n\t}\n}\n\nexport default connect(mapStateToProps, mapDispatchToProps)(${1})\nexport { ${1} as ${1}Component }"
+
+  'reactdumb':
+    'prefix': 'reactdumb'
+    'body': """ 
+import React, { Component } from 'react';
+
+class ${1:NewComponent} extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      ${2}
+    }
+  }
+  render() {
+    return (
+      <div className="">
+        ${3}
+      </div>
+    )
+  }
+}
+
+export default ${1:NewComponent}"""

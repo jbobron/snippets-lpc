@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle lpc-frontend-snippets",
+        "command": "lpc-frontend-snippets:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "lpc-frontend-snippets",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "lpc-frontend-snippets:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
